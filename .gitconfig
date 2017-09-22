@@ -3,6 +3,7 @@
 	email = yuta.morita@coincheck.com
 [core]
 	excludesfile = /Users/morrr/.gitignore_global
+	editor = mvim -f
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

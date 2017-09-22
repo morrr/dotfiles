@@ -1,4 +1,8 @@
-.vim/swap
-.vim/back
-.vim/undo
-
+.vim/swap/*
+.vim/back/*
+.vim/undo/*
+!.vim/swap/.keep
+!.vim/back/.keep
+!.vim/undo/.keep
+.vim/.netrwhist
+.vim/winpos
