@@ -28,6 +28,13 @@ set fencs=utf-8,iso-2022-jp,sjis,euc-jp
 "set background=dark
 colorscheme default
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_degrade=1
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic = 1
+let g:solarized_contrast = "high"
+let g:solarized_visibility= "high"
 
 set number
 set ruler
@@ -100,4 +107,5 @@ au BufNewFile,BufRead *.md set filetype=markdown
 " ------------------------------------------------------------
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+
 
