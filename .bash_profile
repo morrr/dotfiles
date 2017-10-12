@@ -2,9 +2,15 @@
 #
 # Alias
 #
-alias ls='ls -aFh'
-alias lf='ls -alFh'
+alias ls='ls -aFhG'
+alias lf='ls -alFhG'
 alias cls='clear'
+
+#
+# Color
+#
+export TERM=xterm-256color
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 #
 # rbenv
@@ -21,10 +27,3 @@ export PATH=$HOME/.pyenv/shims:$PATH
 #
 export PATH=/Applications/MacVim.app/Contents/bin:$PATH
 
-# Terminal.app側で設定
-##
-## tmux
-##
-#if [ $SHLVL = 1 ]; then
-#    tmux
-#fi
