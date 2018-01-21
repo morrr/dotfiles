@@ -1,3 +1,7 @@
+#
+# General
+#
+set -o vi
 
 #
 # Alias

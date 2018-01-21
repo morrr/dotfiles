@@ -1,3 +1,6 @@
+#
+# vim
+#
 .vim/swap/*
 .vim/back/*
 .vim/undo/*
@@ -6,3 +9,4 @@
 !.vim/undo/.keep
 .vim/.netrwhist
 .vim/winpos
+.vim/dein
