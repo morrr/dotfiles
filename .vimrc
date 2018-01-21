@@ -118,9 +118,13 @@ if dein#load_state(expand('~/.vim/dein'))
   call dein#begin(expand('~/.vim/dein'))
 
   call dein#add('Shougo/neocomplcache.vim')
-  call dein#add('Shougo/vimproc.vim')
+  "call dein#add('Shougo/vimproc.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/unite.vim')
+
+  " colorscheme
+  call dein#add('tomasr/molokai')
+  call dein#add('endel/vim-github-colorscheme')
 
   call dein#end()
   call dein#save_state()
