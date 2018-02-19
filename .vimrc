@@ -86,9 +86,9 @@ vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><C
 " ------------------------------------------------------------
 " IME off
 " ------------------------------------------------------------
-"set noimdisable
-"inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-set noimdisable
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+inoremap <silent><CTRL-[> <CTRL-[>:set iminsert=0<CR>
+set imdisable
 set iminsert=0 imsearch=0
 set noimcmdline
 inoremap :set iminsert=0
