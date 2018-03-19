@@ -121,6 +121,8 @@ if dein#load_state(expand('~/.vim/dein'))
   "call dein#add('Shougo/vimproc.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/unite.vim')
+  call dein#add('tyru/open-browser.vim')
+  call dein#add('tyru/open-browser-github.vim')
 
   " colorscheme
   call dein#add('tomasr/molokai')
@@ -183,5 +185,4 @@ endif
 "let g:neocomplcache_force_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplcache_force_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
 
