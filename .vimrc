@@ -61,8 +61,9 @@ au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rb    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
-" Markdown
+" Filetype
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.jbuilder set filetype=ruby
 
 " Coffee Script
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
