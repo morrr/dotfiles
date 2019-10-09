@@ -27,7 +27,24 @@ export PATH=$HOME/.rbenv/shims:$PATH
 export PATH=$HOME/.pyenv/shims:$PATH
 
 #
+# nvm
+#
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+#
 # vim
 #
 export PATH=/Applications/MacVim.app/Contents/bin:$PATH
 
+#
+# Docker
+#
+export SSH_AUTH_SOCK=~/.ssh/id_rsa_github
+
+#
+# 環境依存の設定は.bashrcに記述する方針とする
+#
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
