@@ -4,9 +4,9 @@
 syntax on
 set nocompatible
 set fileformats=unix,dos,mac
-set backupdir=~/.vim/back
-set directory=~/.vim/swap
-set undodir=~/.vim/undo
+set backupdir=~/.cache/nvim/back
+set directory=~/.cache/nvim/swap
+set undodir=~/.cache/nvim/undo
 set number
 set ruler
 set nolist
@@ -28,9 +28,36 @@ set ff=unix
 set fencs=utf-8,iso-2022-jp,sjis,euc-jp
 
 " ------------------------------------------------------------
+" Dein
+" https://github.com/Shougo/dein.vim
+" :call dein#install()
+" ------------------------------------------------------------
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
+
+if dein#load_state(expand('~/.cache/dein'))
+  call dein#begin(expand('~/.cache/dein'))
+  call dein#add('tyru/open-browser.vim')
+  call dein#add('tyru/open-browser-github.vim')
+
+  " colorscheme
+  call dein#add('tomasr/molokai')
+  call dein#add('endel/vim-github-colorscheme')
+  call dein#add('altercation/vim-colors-solarized')
+
+  call dein#add('posva/vim-vue')
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+" ------------------------------------------------------------
 " Color
 " ------------------------------------------------------------
-colorscheme default
+colorscheme solarized
+set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 let g:solarized_degrade=1
@@ -94,27 +121,3 @@ set iminsert=0 imsearch=0
 set noimcmdline
 inoremap :set iminsert=0
 
-" ------------------------------------------------------------
-" Dein
-" https://github.com/Shougo/dein.vim
-" :call dein#install()
-" ------------------------------------------------------------
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
-
-if dein#load_state(expand('~/.cache/dein'))
-  call dein#begin(expand('~/.cache/dein'))
-  call dein#add('tyru/open-browser.vim')
-  call dein#add('tyru/open-browser-github.vim')
-
-  " colorscheme
-  call dein#add('tomasr/molokai')
-  call dein#add('endel/vim-github-colorscheme')
-
-  call dein#add('posva/vim-vue')
-
-  call dein#end()
-  call dein#save_state()
-endif
