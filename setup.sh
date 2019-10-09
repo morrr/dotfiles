@@ -24,4 +24,5 @@ ln -sf ~/Workspace/github.com/morrr/dotfiles/.inputrc ~/.inputrc
 ln -sf ~/Workspace/github.com/morrr/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/Workspace/github.com/morrr/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/Workspace/github.com/morrr/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/Workspace/github.com/morrr/dotfiles/.config/nvim ~/.config/nvim
 
