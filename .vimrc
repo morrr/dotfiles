@@ -53,6 +53,10 @@ set softtabstop=4
 " ------------------------------------------------------------
 " Filetype-Specified
 " ------------------------------------------------------------
+" Filetype
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.jbuilder set filetype=ruby
+
 " Web
 au BufNewFile,BufRead *.xml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2 softtabstop=2
@@ -60,10 +64,6 @@ au BufNewFile,BufRead *.erb set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rb    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
-" Filetype
-au BufNewFile,BufRead *.md set filetype=markdown
-au BufNewFile,BufRead *.jbuilder set filetype=ruby
 
 " Coffee Script
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
@@ -109,6 +109,7 @@ autocmd FileType java set tags+=~/tags/android
 " ------------------------------------------------------------
 " Dein
 " https://github.com/Shougo/dein.vim
+" :call dein#install()
 " ------------------------------------------------------------
 if &compatible
   set nocompatible
@@ -120,14 +121,16 @@ if dein#load_state(expand('~/.vim/dein'))
 
   "call dein#add('Shougo/neocomplcache.vim')
   "call dein#add('Shougo/vimproc.vim')
-  call dein#add('Shougo/neomru.vim')
-  call dein#add('Shougo/unite.vim')
+  "call dein#add('Shougo/neomru.vim')
+  "call dein#add('Shougo/unite.vim')
   call dein#add('tyru/open-browser.vim')
   call dein#add('tyru/open-browser-github.vim')
 
   " colorscheme
   call dein#add('tomasr/molokai')
   call dein#add('endel/vim-github-colorscheme')
+
+  call dein#add('posva/vim-vue')
 
   call dein#end()
   call dein#save_state()
