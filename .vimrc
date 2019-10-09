@@ -113,10 +113,6 @@ set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
 if dein#load_state(expand('~/.vim/dein'))
   call dein#begin(expand('~/.vim/dein'))
 
-  "call dein#add('Shougo/neocomplcache.vim')
-  "call dein#add('Shougo/vimproc.vim')
-  "call dein#add('Shougo/neomru.vim')
-  "call dein#add('Shougo/unite.vim')
   call dein#add('tyru/open-browser.vim')
   call dein#add('tyru/open-browser-github.vim')
 

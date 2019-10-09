@@ -6,6 +6,7 @@ let g:solarized_degrade=0
 let g:solarized_contrast = "normal"
 let g:solarized_visibility= "normal"
 
+
 " ------------------------------------------------------------
 "  Platform options
 " ------------------------------------------------------------
@@ -13,9 +14,6 @@ if has ('gui_macvim')
     " ------------------------------------------------------------
     "  OSX
     " ------------------------------------------------------------
-    " Set imdisable
-    "set transparency=5
-
     " Set window size
     set columns=140
     set lines=40
@@ -24,19 +22,9 @@ if has ('gui_macvim')
     colorscheme solarized
     set background=dark
 
-    " Set IME
-    "inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-
     " Set font
     set guifont=Menlo:h12
     set linespace=2
-    "set guifont=Menlo-Regular:h18
-    "set guifont=Menlo-Bold:h13
-    "set guifont=Menlo-Bold:h14
-    "set guifont=Osaka-Mono:h20
-    "set guifontwide=Osaka-Mono:h13
-    "set guifont=MigMix\ 1M:h17
-    "set guifontwide=MigMix\ 1M:h12
     
     set guioptions-=r
     set guioptions-=L
@@ -51,18 +39,19 @@ else
     set linespace=0
 endif
 
+
 " ------------------------------------------------------------
 "  Beep off
 " ------------------------------------------------------------
 set visualbell t_vb=
+
 
 " ------------------------------------------------------------
 "  Toolbar options
 " ------------------------------------------------------------
 " hide toolbar
 set guioptions-=T
-" hide menubar
-"set guioptions-=m
+
 
 " ------------------------------------------------------------
 "  Tab options
@@ -85,6 +74,7 @@ function! GuiTabLabel()
     return l:label
 endfunction
 set guitablabel=%N:\ %{GuiTabLabel()}
+
 
 " ------------------------------------------------------------
 "  Windowsize options
