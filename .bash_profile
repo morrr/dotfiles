@@ -38,6 +38,11 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/Applications/MacVim.app/Contents/bin:$PATH
 
 #
+# neovim
+#
+export XDG_CONFIG_HOME="$HOME/.config"
+
+#
 # Docker
 #
 export SSH_AUTH_SOCK=~/.ssh/id_rsa_github
