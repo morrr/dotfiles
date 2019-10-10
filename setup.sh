@@ -1,5 +1,7 @@
 #!/bin/bash
 
+REPO_BASE_DIR=~/Workspace/github.com
+
 #
 # dock
 #
@@ -9,20 +11,19 @@ killall Dock
 #
 # vim
 #
-mkdir -p ~/Workspace/github.com/Shougo/dein.vim
-git clone https://github.com/Shougo/dein.vim.git \
-    ~/Workspace/github.com/Shougo/dein.vim
+mkdir -p $REPO_BASE_DIR/Shougo/dein.vim
+git clone https://github.com/Shougo/dein.vim.git $REPO_BASE_DIR/Shougo/dein.vim
 
 #
-# rc
+# symlink config files
 #
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.vim ~/.vim
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.gvimrc ~/.gvimrc
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.inputrc ~/.inputrc
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.gitignore_global ~/.gitignore_global
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/Workspace/github.com/morrr/dotfiles/.config/nvim ~/.config/nvim
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.vim ~/.vim
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.vimrc ~/.vimrc
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gvimrc ~/.gvimrc
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.bash_profile ~/.bash_profile
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.inputrc ~/.inputrc
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitconfig ~/.gitconfig
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.config/nvim ~/.config/nvim
 
