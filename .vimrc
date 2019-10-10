@@ -1,12 +1,74 @@
 " ------------------------------------------------------------
+" Dein
+" https://github.com/Shougo/dein.vim
+" :call dein#install()
+" ------------------------------------------------------------
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
+
+" ------------------------------------------------------------
+" Env specific
+" ------------------------------------------------------------
+if has('nvim')
+  " ------------------------------------------------------------
+  " neovim
+  " ------------------------------------------------------------
+  set backupdir=~/.cache/nvim/back
+  set directory=~/.cache/nvim/swap
+  set undodir=~/.cache/nvim/undo
+
+  " Dein
+  if dein#load_state(expand('~/.cache/dein'))
+    call dein#begin(expand('~/.cache/dein'))
+    call dein#add('tyru/open-browser.vim')
+    call dein#add('tyru/open-browser-github.vim')
+  
+    " colorscheme
+    call dein#add('tomasr/molokai')
+    call dein#add('endel/vim-github-colorscheme')
+    call dein#add('altercation/vim-colors-solarized')
+  
+    call dein#add('posva/vim-vue')
+  
+    call dein#end()
+    call dein#save_state()
+  endif
+
+else
+  " ------------------------------------------------------------
+  " vim
+  " ------------------------------------------------------------
+  set backupdir=~/.vim/back
+  set directory=~/.vim/swap
+  set undodir=~/.vim/undo
+
+  " Dein
+  if dein#load_state(expand('~/.vim/dein'))
+    call dein#begin(expand('~/.vim/dein'))
+  
+    call dein#add('tyru/open-browser.vim')
+    call dein#add('tyru/open-browser-github.vim')
+  
+    " colorscheme
+    call dein#add('tomasr/molokai')
+    call dein#add('endel/vim-github-colorscheme')
+    call dein#add('altercation/vim-colors-solarized')
+  
+    call dein#add('posva/vim-vue')
+  
+    call dein#end()
+    call dein#save_state()
+  endif
+endif
+
+" ------------------------------------------------------------
 " General
 " ------------------------------------------------------------
 syntax on
 set nocompatible
 set fileformats=unix,dos,mac
-set backupdir=~/.vim/back
-set directory=~/.vim/swap
-set undodir=~/.vim/undo
 set number
 set ruler
 set nolist
@@ -53,7 +115,7 @@ set shiftwidth=4
 set softtabstop=4
 
 " ------------------------------------------------------------
-" Filetype-Specified
+" Filetype specific
 " ------------------------------------------------------------
 " Filetype
 au BufNewFile,BufRead *.md set filetype=markdown
@@ -100,31 +162,4 @@ inoremap :set iminsert=0
 " BufferList.vim
 " ------------------------------------------------------------
 map <silent> <C-q> :call BufferList()<CR>
-
-" ------------------------------------------------------------
-" Dein
-" https://github.com/Shougo/dein.vim
-" :call dein#install()
-" ------------------------------------------------------------
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
-
-if dein#load_state(expand('~/.vim/dein'))
-  call dein#begin(expand('~/.vim/dein'))
-
-  call dein#add('tyru/open-browser.vim')
-  call dein#add('tyru/open-browser-github.vim')
-
-  " colorscheme
-  call dein#add('tomasr/molokai')
-  call dein#add('endel/vim-github-colorscheme')
-  call dein#add('altercation/vim-colors-solarized')
-
-  call dein#add('posva/vim-vue')
-
-  call dein#end()
-  call dein#save_state()
-endif
 
