@@ -22,9 +22,21 @@ export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export PATH=$HOME/.rbenv/shims:$PATH
 
 #
+# Rails
+#
+export EDITOR=vim
+
+#
 # pyenv
 #
 export PATH=$HOME/.pyenv/shims:$PATH
+
+#
+# golang
+#
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+
 
 #
 # nvm
