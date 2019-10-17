@@ -125,6 +125,7 @@ au BufNewFile,BufRead *.erb set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rb    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.vue    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Coffee Script
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
