@@ -117,7 +117,7 @@ set softtabstop=4
 " ------------------------------------------------------------
 " Filetype specific
 " ------------------------------------------------------------
-au BufNewFile,BufRead *.md set filetype=markdown expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.md set filetype=markdown expandtab tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.jbuilder set filetype=ruby expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.xml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2 softtabstop=2
