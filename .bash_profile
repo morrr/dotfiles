@@ -63,5 +63,5 @@ export SSH_AUTH_SOCK=~/.ssh/id_rsa_github
 # 環境依存の設定は.bashrcに記述する方針とする
 #
 if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
+  . ~/.bashrc
 fi
