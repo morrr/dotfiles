@@ -88,6 +88,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set ic
+set hlsearch
 
 " ------------------------------------------------------------
 " Filetype specific
@@ -108,17 +110,6 @@ au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rb    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.vue    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
-" ------------------------------------------------------------
-" Search
-" ------------------------------------------------------------
-set ic
-set hlsearch
-" 全角スペースをハイライトする
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/
-" ビジュアルモードでの選択時に * で選択単語を検索
-vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR>
 
 " ------------------------------------------------------------
 " IME off
