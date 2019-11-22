@@ -16,4 +16,7 @@
 # nvim
 #
 .config/nvim/.netrwhist
+!.config/nvim/swap/.keep
+!.config/nvim/back/.keep
+!.config/nvim/undo/.keep
 

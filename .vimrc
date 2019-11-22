@@ -2,12 +2,12 @@
 " Env specific
 " ------------------------------------------------------------
 if has('nvim')
-  let s:dein_dir = '~/.cache/dein'
+  let s:dein_dir='~/.cache/dein'
   set backupdir=~/.cache/nvim/back
   set directory=~/.cache/nvim/swap
   set undodir=~/.cache/nvim/undo
 else
-  let s:dein_dir = '~/.vim/dein'
+  let s:dein_dir='~/.vim/dein'
   set backupdir=~/.vim/back
   set directory=~/.vim/swap
   set undodir=~/.vim/undo
@@ -33,6 +33,8 @@ if dein#load_state(expand(s:dein_dir))
   call dein#add('tomasr/molokai')
   call dein#add('endel/vim-github-colorscheme')
   call dein#add('altercation/vim-colors-solarized')
+
+  call map(dein#check_clean(), "delete(v:val, 'rf')")  " これをvimrcに追記して起動
 
   call dein#end()
   call dein#save_state()
