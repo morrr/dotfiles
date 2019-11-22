@@ -16,7 +16,11 @@ endif
 " ------------------------------------------------------------
 " Dein
 " https://github.com/Shougo/dein.vim
-" :call dein#install()
+" install: 
+"   :call dein#install()
+" remove plugin:
+"   :call map(dein#check_clean(), "delete(v:val, 'rf')")  " これをvimrcに追記して起動
+"   :call dein#recache_runtimepath()                      " 起動後に実行
 " ------------------------------------------------------------
 set nocompatible
 set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
@@ -29,8 +33,6 @@ if dein#load_state(expand(s:dein_dir))
   call dein#add('tomasr/molokai')
   call dein#add('endel/vim-github-colorscheme')
   call dein#add('altercation/vim-colors-solarized')
-
-  call dein#add('posva/vim-vue')
 
   call dein#end()
   call dein#save_state()
@@ -90,6 +92,13 @@ set softtabstop=4
 " ------------------------------------------------------------
 " Filetype specific
 " ------------------------------------------------------------
+" vue
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
+
+" Coffee Script
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+
 au BufNewFile,BufRead *.md set filetype=markdown expandtab tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.jbuilder set filetype=ruby expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.xml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
@@ -99,14 +108,6 @@ au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.rb    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.vue    set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
-" Coffee Script
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
-
-" Plugin
-filetype plugin indent on
-
 
 " ------------------------------------------------------------
 " Search
