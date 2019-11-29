@@ -54,8 +54,6 @@ set showmatch
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set laststatus=2
 set autochdir
-set cursorline
-set list
 
 " ------------------------------------------------------------
 " Encoding
@@ -120,4 +118,3 @@ set imdisable
 set iminsert=0 imsearch=0
 set noimcmdline
 inoremap :set iminsert=0
-
