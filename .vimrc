@@ -53,10 +53,37 @@ set lcs=tab:>-,eol:<,trail:-,extends:>
 set nowrap
 set showcmd
 set showmatch
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-set laststatus=2
 set autochdir
 let g:netrw_keepdir=0   " netrwで自動的にカレントを変える
+
+" status line
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set laststatus=2
+
+" tab line
+function TabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  return fnamemodify(bufname(buflist[winnr - 1]), ':t')
+endfunction
+
+function TabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+    let s .= ' %{TabLabel(' . (i + 1) . ')} '
+  endfor
+
+  let s .= '%#TabLineFill#%T'
+  return s
+endfunction
+set showtabline=2
+set tabline=%!TabLine()
+
 
 " ------------------------------------------------------------
 " Encoding
@@ -83,7 +110,6 @@ colorscheme solarized
 " ------------------------------------------------------------
 " Tab
 " ------------------------------------------------------------
-set showtabline=2
 set autoindent
 set expandtab
 set tabstop=4
