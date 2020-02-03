@@ -147,3 +147,14 @@ set imdisable
 set iminsert=0 imsearch=0
 set noimcmdline
 inoremap :set iminsert=0
+
+" ------------------------------------------------------------
+" Grep
+" ------------------------------------------------------------
+set wildignore+=.git/**
+" Rails
+set wildignore+=vendor/**,tmp/**,log/**
+" Node
+set wildignore+=node_modules/**
+
+
