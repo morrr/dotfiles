@@ -1,3 +1,6 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark"
+    "workbench.colorTheme": "Solarized Dark",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.visualstar": true
 }
