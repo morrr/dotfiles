@@ -1,6 +1,8 @@
 #!/bin/bash
 
 REPO_BASE_DIR=~/Workspace/github.com
+# spaceを含む場合はフルパスでないと正しく展開されない...？
+VSCODE_BASE_DIR="/Users/morrr/Library/Application Support/Code/User"
 
 #
 # dock
@@ -26,4 +28,15 @@ ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.config/nvim ~/.config/nvim
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/vscode.settings.json "$VSCODE_BASE_DIR/settings.json"
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/vscode.keybindings.json "$VSCODE_BASE_DIR/keybindings.json"
+
+#
+# install vscode extensions
+#
+# output: $code --list-extensions > vscode.extensions
+cat $REPO_BASE_DIR/morrr/dotfiles/vscode.extensions | while read line
+do
+ code --install-extension $line
+done
 
