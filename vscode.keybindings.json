@@ -1,0 +1,12 @@
+[
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "o",
+        "command": "list.select",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    }
+]

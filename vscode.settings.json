@@ -1,6 +1,13 @@
 {
+    "editor.wordWrap": "off",
     "workbench.colorTheme": "Solarized Dark",
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
-    "vim.visualstar": true
+    "vim.visualstar": true,
+    "window.zoomLevel": 0,
+    "[markdown]":{
+        "editor.wordWrap": "off"
+    },
+    "workbench.tree.indent": 30,
+    "editor.minimap.enabled": false
 }
