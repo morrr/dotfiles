@@ -1,12 +1,68 @@
 [
     {
+        "_comment": "Explorer -> Editor (like vim)",
+        "key": "ctrl+w",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "_comment": "Explorer上でファイルを開く",
         "key": "enter",
         "command": "list.select",
         "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
     },
     {
+        "_comment": "Explorer上でファイルを開く",
         "key": "o",
         "command": "list.select",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus" },
+    {
+        "_comment": "Explorer上でファイルを新規作成する",
+        "key": "a",
+        "command": "explorer.newFile",
         "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "_comment": "Explorer上でファイルを削除する",
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "_comment": "Explorer上でファイルを改名する",
+        "key": "m",
+        "command": "renameFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "_comment": "Editor -> Terminal",
+        "key": "escape",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "_comment": "Terminal-> Editor",
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when":"terminalFocus"
+    },
+    {
+        "_comment": "ターミナルのタブを開く",
+        "key": "cmd+shift+t",
+        "command": "workbench.action.terminal.newInActiveWorkspace"
+    },
+    {
+        "_comment": "ターミナルのタブを閉じる",
+        "key": "cmd+shift+w",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "_comment": "ターミナルの切り替え",
+        "key": "cmd+shift+j",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "_comment": "ターミナルの切り替え",
+        "key": "cmd+shift+k",
+        "command": "workbench.action.terminal.focusPrevious"
     }
 ]
