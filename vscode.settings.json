@@ -9,5 +9,6 @@
         "editor.wordWrap": "off"
     },
     "workbench.tree.indent": 30,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.editor.tabSizing": "shrink"
 }
