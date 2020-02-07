@@ -10,5 +10,15 @@
     },
     "workbench.tree.indent": 30,
     "editor.minimap.enabled": false,
-    "workbench.editor.tabSizing": "shrink"
+    "workbench.editor.tabSizing": "shrink",
+    "ruby.lint": {
+        "ruby": true,
+        "rubocop": {
+            "useBundler": true
+        }
+    },
+    "ruby.useLanguageServer": true,
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useBundler": true,
+    "workbench.editor.highlightModifiedTabs": true
 }
