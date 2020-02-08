@@ -46,6 +46,17 @@
         "when":"terminalFocus"
     },
     {
+        "_comment": "Editor -> Terminal",
+        "key": "cmd+shift+.",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "_comment": "Terminal-> Editor",
+        "key": "cmd+shift+.",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when":"terminalFocus"
+    },
+    {
         "_comment": "ターミナルのタブを開く",
         "key": "cmd+shift+t",
         "command": "workbench.action.terminal.newInActiveWorkspace"
