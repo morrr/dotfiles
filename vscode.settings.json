@@ -20,5 +20,6 @@
     "ruby.useLanguageServer": true,
     "ruby.intellisense": "rubyLocate",
     "ruby.useBundler": true,
-    "workbench.editor.highlightModifiedTabs": true
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.enablePreview": false
 }
