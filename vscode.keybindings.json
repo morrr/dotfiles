@@ -36,17 +36,6 @@
     },
     {
         "_comment": "Editor -> Terminal",
-        "key": "escape",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "_comment": "Terminal-> Editor",
-        "key": "escape",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when":"terminalFocus"
-    },
-    {
-        "_comment": "Editor -> Terminal",
         "key": "cmd+shift+.",
         "command": "workbench.action.terminal.focus"
     },
