@@ -1,7 +1,7 @@
 {
     "editor.wordWrap": "off",
     "workbench.colorTheme": "Solarized Dark",
-    "vim.useSystemClipboard": true,
+    "vim.useSystemClipboard": false,
     "vim.hlsearch": true,
     "vim.visualstar": true,
     "window.zoomLevel": 0,
