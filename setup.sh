@@ -27,6 +27,7 @@ ln -sf $REPO_BASE_DIR/morrr/dotfiles/.vimrc ~/.vimrc
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gvimrc ~/.gvimrc
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.bash_profile ~/.bash_profile
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.inputrc ~/.inputrc
+ln -sf $REPO_BASE_DIR/morrr/dotfiles/.zprofile ~/.zprofile
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/.tmux.conf ~/.tmux.conf
