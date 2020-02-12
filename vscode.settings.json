@@ -26,5 +26,6 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.lineHeight": 0,
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shell.osx": "/bin/zsh",
 }
