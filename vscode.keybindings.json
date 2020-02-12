@@ -64,5 +64,21 @@
         "_comment": "ターミナルの切り替え",
         "key": "cmd+shift+k",
         "command": "workbench.action.terminal.focusPrevious"
-    }
+    },
+    {
+        "_comment": "vimの操作と衝突するのでターミナルの表示切り替えを削る",
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "_comment": "ターミナルの表示を切り替える",
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "_comment": "backspaceでインデントを下げる",
+        "key": "backspace",
+        "command":  "deleteLeft",
+        "when": "vim.mode == 'Insert'"
+    },
 ]
