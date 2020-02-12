@@ -17,6 +17,12 @@ export TERM=xterm-256color
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 #
+# Input
+#
+autoload -U compinit; compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+#
 # rbenv
 #
 export PATH=$HOME/.rbenv/shims:$PATH
