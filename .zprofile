@@ -11,10 +11,12 @@ alias lf='ls -alFhG'
 alias cls='clear'
 
 #
-# Color
+# Color / Theme
 #
 export TERM=xterm-256color
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
 
 #
 # Input

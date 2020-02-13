@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 #
 # Env
@@ -36,11 +36,19 @@ ln -sf $REPO_BASE_DIR/morrr/dotfiles/vscode.settings.json "$VSCODE_BASE_DIR/sett
 ln -sf $REPO_BASE_DIR/morrr/dotfiles/vscode.keybindings.json "$VSCODE_BASE_DIR/keybindings.json"
 
 #
+# Zsh
+#
+# oh-my-zsh
+# .zshrcが編集されるので注意
+# https://github.com/ohmyzsh/ohmyzsh
+# https://github.com/agnoster/agnoster-zsh-theme
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#
 # Vim
 #
 mkdir -p $REPO_BASE_DIR/Shougo/dein.vim
 git clone https://github.com/Shougo/dein.vim.git $REPO_BASE_DIR/Shougo/dein.vim
-
 
 #
 # Visual Studio Code
@@ -56,3 +64,9 @@ done
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
+#
+# Manual
+#
+# oh-my-zsh, vscodeで使うフォント
+# 現状手動でfont-bookに入れてる
+# https://github.com/powerline/fonts
