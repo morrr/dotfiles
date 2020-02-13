@@ -1,7 +1,7 @@
 #
 # General
 #
-set -o vi
+bindkey -v
 
 #
 # Alias
