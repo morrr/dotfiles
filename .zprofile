@@ -25,14 +25,15 @@ autoload -U compinit; compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 #
+# Git
+#
+export EDITOR=nvim
+export VISUAL=vim
+
+#
 # rbenv
 #
 export PATH=$HOME/.rbenv/shims:$PATH
-
-#
-# Rails
-#
-export EDITOR=vim
 
 #
 # pyenv
