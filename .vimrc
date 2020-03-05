@@ -26,15 +26,17 @@ set nocompatible
 set runtimepath+=~/Workspace/github.com/Shougo/dein.vim
 if dein#load_state(expand(s:dein_dir))
   call dein#begin(expand(s:dein_dir))
-  call dein#add('tyru/open-browser.vim')
-  call dein#add('tyru/open-browser-github.vim')
+    call dein#add('tyru/open-browser.vim')
+    call dein#add('tyru/open-browser-github.vim')
 
-  " colorscheme
-  call dein#add('tomasr/molokai')
-  call dein#add('endel/vim-github-colorscheme')
-  call dein#add('altercation/vim-colors-solarized')
+    " colorscheme
+    call dein#add('tomasr/molokai')
+    call dein#add('endel/vim-github-colorscheme')
+    call dein#add('altercation/vim-colors-solarized')
 
-  call map(dein#check_clean(), "delete(v:val, 'rf')")  " これをvimrcに追記して起動
+    " syntax
+    call dein#add('leafgarland/typescript-vim')
+    call dein#add('peitalin/vim-jsx-typescript')
 
   call dein#end()
   call dein#save_state()
