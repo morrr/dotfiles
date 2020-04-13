@@ -125,26 +125,27 @@ set hlsearch
 " ------------------------------------------------------------
 " Ruby
 au BufNewFile,BufRead *.md set filetype=markdown expandtab tabstop=4 shiftwidth=4 softtabstop=4
-au BufNewFile,BufRead *.jbuilder set filetype=ruby expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.yml set filetype=yaml expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 au BufNewFile,BufRead *.xml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-au BufNewFile,BufRead *.erb set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 au BufNewFile,BufRead *.rb set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.ru set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.erb set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.rhtml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.jbuilder set filetype=ruby expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Coffee Script
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-autocmd FileType coffee set expandtab tabstop=2 shiftwidth=2 softtabstop=2 
+au BufNewFile,BufRead *.coffee set filetype=coffee expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " js/ts
-au BufNewFile,BufRead *.js  set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-au BufNewFile,BufRead *.ts  set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.js set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.ts set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.tsx set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " vue
-autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
-au BufNewFile,BufRead *.vue set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.vue set filetype=html expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 
 " ------------------------------------------------------------
