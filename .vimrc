@@ -28,6 +28,7 @@ if dein#load_state(expand(s:dein_dir))
   call dein#begin(expand(s:dein_dir))
     call dein#add('tyru/open-browser.vim')
     call dein#add('tyru/open-browser-github.vim')
+    call dein#add('tpope/vim-fugitive')
 
     " colorscheme
     call dein#add('tomasr/molokai')
@@ -126,6 +127,7 @@ set hlsearch
 " Ruby
 au BufNewFile,BufRead *.md set filetype=markdown expandtab tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.yml set filetype=yaml expandtab tabstop=2 shiftwidth=2 softtabstop=2
+au BufNewFile,BufRead *.json5 set filetype=javascript expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 au BufNewFile,BufRead *.xml set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2 softtabstop=2
